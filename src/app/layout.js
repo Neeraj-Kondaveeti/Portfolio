@@ -4,7 +4,7 @@ import "./globals.css";
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 export const metadata = {
-  title: "Rajesh Kumar Reddy | Software Engineer",
+  title: "Neeraj Kondaveeti | Software Engineer",
   description: "Full Stack Developer specializing in React, Node.js, and Cloud Architecture",
 }
 
