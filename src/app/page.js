@@ -2,7 +2,10 @@
 import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import userImage from '../assets/rajesh_kumar_photo1.jpeg';
+
+// ⭐ Use YOUR actual photo here
+import userImage from '../assets/neeraj_photo.jpeg';
+
 import Image from 'next/image';
 import { ArrowForward, FileDownload } from '@mui/icons-material';
 import { TypeAnimation } from 'react-type-animation';
@@ -16,7 +19,6 @@ export default function Home() {
       easing: 'ease-in-out-quart'
     });
     
-    // Clean up AOS when component unmounts
     return () => {
       AOS.refresh();
     };
@@ -27,7 +29,7 @@ export default function Home() {
       <div className="container">
         <div className="hero-content">
           
-          {/* Image Column - Moved to right on desktop, top on mobile */}
+          {/* IMAGE */}
           <div 
             className="hero-image" 
             data-aos="fade-up" 
@@ -37,7 +39,7 @@ export default function Home() {
             <div className="image-wrapper">
               <Image 
                 src={userImage} 
-                alt="Rajesh Kumar Reddy Avula" 
+                alt="Neeraj Kondaveeti" 
                 fill
                 className="profile-image"
                 priority
@@ -47,7 +49,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Text Column */}
+          {/* TEXT */}
           <div 
             className="hero-text" 
             data-aos="fade-up" 
@@ -60,21 +62,24 @@ export default function Home() {
                 data-aos="zoom-in" 
                 data-aos-delay="300"
               ></div>
+
               <h1 className="main-title">
-                <span className="gradient-text">Rajesh Kumar Reddy Avula</span>
+                <span className="gradient-text">Neeraj Kondaveeti</span>
                 <br />
+
+                {/* TYPE ANIMATION */}
                 <TypeAnimation
                   sequence={[
-                    'FULL STACK DEVELOPER',
-                    1000,
+                    'FULL STACK ENGINEER',
+                    1200,
                     'SOFTWARE ENGINEER',
-                    1000,
-                    'REACT SPECIALIST',
-                    1000,
-                    'CLOUD ARCHITECT',
-                    1000,
-                    'ML ENTHUSIAST',
-                    1000
+                    1200,
+                    'MERN + NEXT.JS DEVELOPER',
+                    1200,
+                    'AI / ML PRACTITIONER',
+                    1200,
+                    'GEOAI RESEARCHER',
+                    1200
                   ]}
                   wrapper="span"
                   speed={50}
@@ -85,17 +90,20 @@ export default function Home() {
               </h1>
             </div>
 
+            {/* DESCRIPTION */}
             <p 
               className="hero-description" 
               data-aos="fade-up" 
               data-aos-delay="100"
             >
-              I am a passionate <span className="highlight">Full Stack Developer</span> with {' '}
-              <span className="highlight">2+ years</span> of experience building scalable web applications. 
-              I specialize in modern JavaScript frameworks and cloud-native architectures, delivering 
-              high-performance solutions with elegant user interfaces.
+              I am a <span className="highlight">Full Stack Engineer</span> specializing in
+              building scalable web applications using <span className="highlight">React,
+              Next.js, Node.js, and MongoDB</span>. I also work with modern AI/ML
+              pipelines — including GPT, geospatial ML, and computer vision — delivering
+              high-impact solutions that improve system performance and user experience.
             </p>
 
+            {/* BUTTONS */}
             <div 
               className="hero-actions" 
               data-aos="fade-up" 
@@ -113,12 +121,12 @@ export default function Home() {
               </Link>
 
               <a 
-                href="/Rajesh_kumar_cv.pdf" 
-                download="Rajesh_Kumar_CV.pdf"
+                href="/Kondaveeti_Neeraj_Resume.pdf"
+                download="Neeraj_Kondaveeti_Resume.pdf"
                 className="action-btn secondary"
-                aria-label="Download my CV"
+                aria-label="Download my Resume"
               >
-                DOWNLOAD CV
+                DOWNLOAD RESUME
                 <span className="btn-icon">
                   <FileDownload fontSize="small" />
                 </span>

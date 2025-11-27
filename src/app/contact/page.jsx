@@ -5,7 +5,7 @@ import { useForm } from '@formspree/react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Drafts, ContactPhone, Send } from '@mui/icons-material';
-import { FaFacebookF, FaYoutube, FaTwitter, FaLinkedin } from "react-icons/fa";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { Button } from '@mui/material';
 
 const Contact = () => {
@@ -39,53 +39,62 @@ const Contact = () => {
         </div>
 
         <div className="contact-content">
-          {/* Left Column - Contact Info */}
+          {/* Left Column */}
           <div className="contact-info" data-aos="fade-right">
             <h3>I would love to hear from you!</h3>
             <p>
-              Whether you have a question, a business inquiry, or just want to say hi — 
-              my inbox is always open.
+              Whether you have a question, a project idea, or just want to say hello — 
+              feel free to reach out anytime.
             </p>
 
             <div className="contact-details">
+              {/* Email */}
               <div className="detail-item">
                 <Drafts className="detail-icon" />
                 <div className="detail-text">
                   <span>EMAIL</span>
-                  <p>avula.rajesh.kumar.reddy@gmail.com</p>
+                  <p>neerajkondaveeti1901@gmail.com</p>
                 </div>
               </div>
 
+              {/* Phone */}
               <div className="detail-item">
                 <ContactPhone className="detail-icon" />
                 <div className="detail-text">
                   <span>PHONE</span>
-                  <p>+1 930-333-4205</p>
+                  <p>930-333-4774</p>
                 </div>
               </div>
             </div>
 
+            {/* Social Links */}
             <div className="social-links">
-              {[
-                { icon: FaFacebookF, name: "Facebook" },
-                { icon: FaTwitter, name: "Twitter" },
-                { icon: FaYoutube, name: "YouTube" },
-                { icon: FaLinkedin, name: "LinkedIn" }
-              ].map((social, i) => (
-                <Button 
-                  key={i}
-                  className="social-icon"
-                  aria-label={social.name}
-                  data-aos="zoom-in"
-                  data-aos-delay={i * 100}
-                >
-                  <social.icon />
-                </Button>
-              ))}
+              <Button 
+                className="social-icon"
+                aria-label="LinkedIn"
+                href="https://www.linkedin.com/in/neeraj-kondaveeti-806b67208/"
+                target="_blank"
+                rel="noreferrer"
+                data-aos="zoom-in"
+              >
+                <FaLinkedin />
+              </Button>
+
+              <Button 
+                className="social-icon"
+                aria-label="GitHub"
+                href="https://github.com/Neeraj-Kondaveeti"
+                target="_blank"
+                rel="noreferrer"
+                data-aos="zoom-in"
+                data-aos-delay="100"
+              >
+                <FaGithub />
+              </Button>
             </div>
           </div>
 
-          {/* Right Column - Contact Form */}
+          {/* Right Column - Form */}
           <div className="contact-form" data-aos="fade-left">
             <form onSubmit={handleSubmit}>
               <div className="form-grid">
@@ -98,6 +107,7 @@ const Contact = () => {
                     required 
                   />
                 </div>
+
                 <div className="form-group">
                   <input 
                     type="email" 
@@ -107,6 +117,7 @@ const Contact = () => {
                     required 
                   />
                 </div>
+
                 <div className="form-group">
                   <input 
                     type="text" 
@@ -116,6 +127,7 @@ const Contact = () => {
                     required 
                   />
                 </div>
+
                 <div className="form-group">
                   <input 
                     type="text" 
@@ -124,6 +136,7 @@ const Contact = () => {
                     placeholder="Company (Optional)" 
                   />
                 </div>
+
                 <div className="form-group full-width">
                   <textarea 
                     id="message" 
